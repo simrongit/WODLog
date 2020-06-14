@@ -1,4 +1,9 @@
 <application>
+  <component name="GithubAccounts">
+    <account id="484c18cc-0a64-4526-a7bd-149b5a11fd91" name="simrongit">
+      <server host="github.com" />
+    </account>
+  </component>
   <component name="GithubSettings">
     <option name="LOGIN" value="simrongit" />
     <option name="AUTH_TYPE" value="BASIC" />
