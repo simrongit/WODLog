@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/logT"
+        android:layout_width="176dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:fadeScrollbars="false"
+        android:fontFamily="monospace"
+        android:scrollbars="vertical"
+        android:text="Round1"
+        app:layout_constraintBottom_toTopOf="@+id/deleteB"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/newB"
+        android:layout_width="96dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:onClick="newB"
+        android:text="Reset Score"
+        app:layout_constraintStart_toEndOf="@+id/logT"
+        app:layout_constraintTop_toBottomOf="@+id/resetB" />
+
+    <Button
+        android:id="@+id/upB"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:text="Up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/newB"
+        app:layout_constraintTop_toBottomOf="@+id/timerT" />
+
+    <Button
+        android:id="@+id/downB"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="Down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/newB"
+        app:layout_constraintTop_toBottomOf="@+id/upB" />
+
+    <EditText
+        android:id="@+id/scoreT"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:hint="10"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logT"
+        app:layout_constraintTop_toBottomOf="@+id/newB" />
+
+    <Button
+        android:id="@+id/submitB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="submitB"
+        android:text="Submit"
+        app:layout_constraintBottom_toTopOf="@+id/newRoundB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logT"
+        app:layout_constraintTop_toBottomOf="@+id/scoreT" />
+
+    <Button
+        android:id="@+id/newRoundB"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="newRoundB"
+        android:text="New Round"
+        app:layout_constraintBottom_toTopOf="@+id/stopStartTimerB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logT" />
+
+    <TextView
+        android:id="@+id/timerT"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="00:00:00"
+        android:textAlignment="center"
+        android:textSize="42sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/logT"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/stopStartTimerB"
+        android:layout_width="96dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="stopStartTimerB"
+        android:text="Start"
+        app:layout_constraintBottom_toTopOf="@+id/shareB"
+        app:layout_constraintStart_toEndOf="@+id/logT" />
+
+    <TextView
+        android:id="@+id/stopStartTimerT"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="0:0"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/shareB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/stopStartTimerB" />
+
+    <Button
+        android:id="@+id/clipB"
+        android:layout_width="176dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="clipB"
+        android:text="Copy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shareB"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/shareB"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="shareB"
+        android:text="Share"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logT" />
+
+    <Button
+        android:id="@+id/resetB"
+        android:layout_width="96dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:onClick="resetB"
+        android:text="Reset"
+        app:layout_constraintStart_toEndOf="@+id/logT"
+        app:layout_constraintTop_toBottomOf="@+id/timerT" />
+
+    <Button
+        android:id="@+id/deleteB"
+        android:layout_width="176dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="deleteB"
+        android:text="Delete Entry"
+        app:layout_constraintBottom_toTopOf="@+id/clipB"
+        app:layout_constraintEnd_toStartOf="@+id/stopStartTimerB"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
